@@ -9,12 +9,7 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "other_info")
-public class OtherInformation {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
-    private Long id;
+public class OtherInformation extends BaseEntity {
 
     @Basic(optional = false)
     @Column(nullable = false)

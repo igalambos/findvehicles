@@ -15,7 +15,7 @@ CREATE INDEX cars_make ON cars (make);
 CREATE TABLE prices
 (
     id     INTEGER IDENTITY PRIMARY KEY,
-    amount BIGINT  NOT NULL,
+    amount FLOAT   NOT NULL,
     car_id INTEGER NOT NULL
 
 );

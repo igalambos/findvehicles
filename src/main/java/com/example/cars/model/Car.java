@@ -9,12 +9,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "cars")
-public class Car {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
-    private Long id;
+public class Car extends BaseEntity {
 
     @Basic(optional = false)
     @Column(nullable = false)

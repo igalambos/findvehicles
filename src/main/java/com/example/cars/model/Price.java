@@ -9,16 +9,11 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "prices")
-public class Price {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
-    private Long id;
+public class Price extends BaseEntity {
 
     @Basic(optional = false)
     @Column(nullable = false)
-    private Long amount;
+    private Float amount;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "car_id", nullable = false)
@@ -29,7 +24,7 @@ public class Price {
     public Price() {
     }
 
-    public Price(Long amount) {
+    public Price(Float amount) {
         this.amount = amount;
     }
 }
