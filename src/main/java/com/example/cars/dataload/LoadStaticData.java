@@ -2,7 +2,7 @@ package com.example.cars.dataload;
 
 import com.example.cars.model.Car;
 import com.example.cars.model.Price;
-import com.example.cars.repository.CarRepository;
+import com.example.cars.service.CarService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -13,10 +13,10 @@ import javax.transaction.Transactional;
 @Component
 public class LoadStaticData implements CommandLineRunner {
 
-    private final CarRepository repository;
+    private final CarService carService;
 
-    public LoadStaticData(CarRepository repository) {
-        this.repository = repository;
+    public LoadStaticData(CarService carService) {
+        this.carService = carService;
     }
 
     @Override
@@ -24,13 +24,13 @@ public class LoadStaticData implements CommandLineRunner {
     public void run(String... args) {
         Car car1 = new Car("Audi", "A4", 10000L, 24L);
         car1.addPrice(new Price(4562F));
-        log.info("Preloading " + repository.save(car1));
+        log.info("Preloading " + carService.save(car1));
 
         Car car2 = new Car("Audi", "A5", 10000L, 24L);
         car2.addPrice(new Price(4562F));
-        log.info("Preloading " + repository.save(car2));
+        log.info("Preloading " + carService.save(car2));
         Car car3 = new Car("Audi", "A5", 10000L, 24L);
         car3.addPrice(new Price(4588F));
-        log.info("Preloading " + repository.save(car3));
+        log.info("Preloading " + carService.save(car3));
     }
 }
