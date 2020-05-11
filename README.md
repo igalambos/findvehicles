@@ -11,7 +11,7 @@ identify the following properties: make, model, mileage, term and price. Any oth
 
 ### Petclinic ER Model
 
-![alt ermodel](http://github.com/igalambos/findvehicles/blob/master/er-diagram.PNG)
+![alt ermodel](https://github.com/igalambos/findvehicles/blob/master/er-diagram.PNG?raw=true)
 
 ## Running petclinic locally
 
