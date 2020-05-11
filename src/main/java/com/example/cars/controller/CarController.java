@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 public class CarController {
+
     private final CarService carService;
 
     public CarController(CarService carService) {
@@ -17,12 +18,12 @@ public class CarController {
     }
 
     @GetMapping("/")
-    public List<Car> findAllvehicles() {
+    public List<Car> findAllVehicles() {
         return carService.findAllVehicles();
     }
 
     @GetMapping("/findvehicles")
-    public List<Car> findvehicles(
+    public List<Car> findVehicles(
             @RequestParam(value = "make", required = false) String make,
             @RequestParam(value = "model", required = false) String model,
             @RequestParam(value = "mileage", required = false) Long mileage,
