@@ -9,11 +9,11 @@ The project can process csv files from third parties containing data of cars.  T
 identify the following properties: make, model, mileage, term and price. Any other headers will also be read as 
 "other information". If two cars have the same make, model, mileage and term, it is assumed that it is the same car.
 
-### Petclinic ER Model
+### Findvehicles ER Model
 
 ![alt ermodel](https://github.com/igalambos/findvehicles/blob/master/er-diagram.PNG?raw=true)
 
-## Running petclinic locally
+## Running findvehicles locally
 
 ### With maven command line
 ```
@@ -22,7 +22,7 @@ cd findvehicles
 ./mvnw spring-boot:run
 ```
 
-You can then access petclinic here: [http://localhost:8090/findvehicles](http://localhost:8090/findvehicles)
+You can then access the application here: [http://localhost:8090/findvehicles](http://localhost:8090/findvehicles)
 
 The API accepts 4 parameters:
  - make
